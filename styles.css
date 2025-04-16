@@ -434,7 +434,7 @@ hero-image img {
 .resume-block {
   margin-bottom: 50px;
   padding: 30px;
-  border-left: 4px solid #6f42c1;
+  border-left: 4px solid #428ec1;
   background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
@@ -458,7 +458,7 @@ hero-image img {
   content: "★";
   position: absolute;
   left: 0;
-  color: #6f42c1;
+  color: #428ec1;
   font-size: 18px;
 }
 
