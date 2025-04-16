@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Huy Truong</div>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="collage.html">Collage</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2 class="section-title">CONTACT ME</h2>
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn hire-btn">Send Message</button>
+      <p id="formMessage"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Huy Truong. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !message) {
+        formMessage.textContent = "Please fill in all fields.";
+        formMessage.style.color = "#f1c40f";
+        return;
+      }
+
+      formMessage.textContent = "Thank you! Your message has been sent.";
+      formMessage.style.color = "#4CAF50";
+
+      form.reset();
+    });
+  </script>
+</body>
+</html>

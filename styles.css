@@ -1,68 +1,58 @@
-/* styles.css */
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Poppins', sans-serif;
   background-color: #1a1a1a;
   color: #fff;
 }
 
-/* Navigation */
 .navbar {
-  background-color: #1a1a1a;
-  padding: 15px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 50px;
+  background-color: #1a1a1a;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 700;
-  color: #fff;
-  text-decoration: none;
 }
 
-.nav-links {
+nav ul {
+  list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-link {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
+nav ul li {
+  display: inline;
 }
 
-.nav-link:hover {
+nav ul li a {
   color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-/* Hero Section */
+nav ul li a:hover {
+  color: #f1c40f;
+}
+
 .hero {
-  padding: 120px 0 60px;
-  min-height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
+  min-height: 80vh;
+  padding: 0 50px;
 }
 
 .hero-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
 }
 
 .hero-text {
@@ -70,111 +60,188 @@ body {
 }
 
 .greeting {
-  color: #ffb400;
-  font-size: 1.2rem;
+  color: #f1c40f;
+  font-size: 24px;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 48px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   line-height: 1.2;
 }
 
 .description {
+  font-size: 16px;
   color: #ccc;
-  font-size: 1rem;
-  line-height: 1.6;
   margin-bottom: 30px;
 }
 
 
 
 .btn {
-  padding: 12px 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .hire-btn {
-  background-color: #6b48ff;
+  background-color: #6f42c1;
   color: #fff;
 }
 
-.hire-btn:hover {
-  background-color: #5439cc;
-}
-
 .cv-btn {
-  background-color: #ffb400;
-  color: #1a1a1a;
+  background-color: #f1c40f;
+  color: #000;
 }
-
-.cv-btn:hover {
-  background-color: #e6a300;
-}
-
 .hero-image img {
-  max-width: 100%;
-  height: auto;
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* Responsive Design */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1a1a1a;
+  color: #ccc;
+  font-size: 14px;
+}
+/* Responsive Styles */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .hero-content {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 
   .hero-text {
     max-width: 100%;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .nav-links {
-    gap: 10px;
-  }
-
-  .nav-link {
-    font-size: 0.8rem;
+    text-align: center;
   }
 }
 
-@media (max-width: 576px) {
-  .hero {
-    padding: 100px 0 40px;
-  }
+hero-image img {
+  width: 100%;
+  height: auto;
+} 
 
-  .hero-text h1 {
-    font-size: 1.5rem;
-  }
 
-  .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-/* Footer */
-footer a:hover {
-  color: #ccc; /* Lighter color on hover */
-  text-decoration: none;
+/**About Me Section**/
+.video-section {
   text-align: center;
+  padding: 40px 20px;
+}
+
+.video-section h3 {
+  font-size: 24px;
+  color: #f1c40f;
+  margin-bottom: 20px;
+}
+
+.hobbies {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hobbies h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #f1c40f;
+}
+
+.hobby-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hobby-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(241, 196, 15, 0.2);
+}
+
+.hobby-item i {
+  font-size: 30px;
+  color: #f1c40f;
+  margin-bottom: 10px;
+}
+
+.hobby-item h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.hobby-item p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+}
+
+/**Contact**/
+.contact-section {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #f1c40f;
+  background-color: #1f1f1f;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+#formMessage {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.hire-btn {
+  background-color: #f1c40f;
+  color: #000;
 }
